@@ -14,7 +14,7 @@ const employee = {
 }
 const { name: otherName } = employee;
 //Predict the output
-console.log(name);
+// console.log(name);
 console.log(otherName);
 
 //This code will output another error because theres no password in the person object 
@@ -55,7 +55,11 @@ console.log(secondKey[0]);
 console.log(willThisWork);
 
 
+function smallest( sortedArray ) {
+    sortedArray = [2, 5, 6, 12, 14, 28, 37, 41, 44, 45]
+        return sortedArray[4];
+    
+    }
 
-
-
+console.log(smallest());
 
