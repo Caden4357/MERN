@@ -54,3 +54,61 @@ const findAverage = (arr) => {
     return "the average of this array is " + avg;
 }
 console.log(findAverage([2,4,6,8,10]));
+
+const arrayWithOddNumbers = () => {
+    let y = [];
+    for (var i = 1; i <= 255; i++){
+        if (i % 2 !== 0){
+            y.push(i);
+        }
+    }
+    return y;
+}
+console.log(arrayWithOddNumbers());
+
+const greaterThanY = (arr, y) => {
+    let count = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > y){
+            count ++;
+        }
+    }
+    return count;
+}
+console.log(greaterThanY([1000,3000,500,7, 200, 6, -29, 1000, 10002, 90000], 1000));
+
+const squareValues = (arr) => {
+    for (var i = 0; i < arr.length; i++){
+        arr[i] = arr[i] * arr[i];
+    }
+    return arr;
+}
+console.log(squareValues([1,5,10,-2]));
+
+const noNegatives = (arr) => {
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            arr[i] = 0;
+        }
+    }
+    return arr;
+}
+console.log(noNegatives([1,5,10,-2]));
+
+const minMaxAvg = (arr) => {
+    let min = arr[0];
+    let max = arr[0];
+    let sum = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < min){
+            min = arr[i];
+        }
+        else if(arr[i] > max){
+            max = arr[i];
+        }
+        sum += arr[i];
+    }
+    let avg = sum / arr.length;
+    return "min is: " + min + " max is: " + max + " avg is: " + avg 
+}
+console.log(minMaxAvg([1,5,10,-2]));
