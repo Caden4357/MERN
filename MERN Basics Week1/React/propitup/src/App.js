@@ -4,13 +4,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Main name="Wilcox, Caden" age="23" hairColor="Blonde"/>
+      <Main name="Wilcox, Caden" initialAge={23} hairColor="Blonde"/>
 
-      <Main name="Smith, John" age="34" hairColor="Brown"/>
+      <Main name="Smith, John" initialAge={34} hairColor="Brown"/>
 
-      <Main name="Withers, Bill" age="58" hairColor="Black"/>
+      <Main name="Withers, Bill" initialAge={69} hairColor="Black"/>
 
-      <Main name="Adams, Amy" age="38" hairColor="Red"/>
+      <Main name="Adams, Amy" initialAge={36} hairColor="Red"/>
     </div>
   );
 }

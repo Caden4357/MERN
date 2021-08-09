@@ -112,3 +112,42 @@ const minMaxAvg = (arr) => {
     return "min is: " + min + " max is: " + max + " avg is: " + avg 
 }
 console.log(minMaxAvg([1,5,10,-2]));
+
+const shiftingValues = (arr) => {
+    for (var i = 0; i < arr.length; i++){
+        arr[i] = arr[i+1] ;  
+    }
+    arr[arr.length-1] = 0;
+    return arr;
+}
+console.log(shiftingValues([1,5,10,7,-2]));
+
+const numberToString = (arr) => {
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            arr[i] = "Dojo";
+        }
+    }
+    return arr;
+}
+console.log(numberToString([-1,-3,2,-6,66]))
+
+
+class Deck {
+    constructor() {
+        const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
+        const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+        const deck = [];
+        for (const suit of suits) {
+            for (const face of faces) {
+            deck.push(this.createCard(suit, face));
+            }
+        }
+        this.deck = deck;
+        }
+        createCard(suit, face) {
+        return face + " of " + suit;
+        }
+}
+deck1 = new Deck;
+console.log(deck1);
