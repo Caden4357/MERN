@@ -132,22 +132,67 @@ const numberToString = (arr) => {
 }
 console.log(numberToString([-1,-3,2,-6,66]))
 
-
-class Deck {
-    constructor() {
-        const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
-        const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
-        const deck = [];
-        for (const suit of suits) {
-            for (const face of faces) {
-            deck.push(this.createCard(suit, face));
-            }
-        }
-        this.deck = deck;
-        }
-        createCard(suit, face) {
-        return face + " of " + suit;
-        }
+const randomArray = () => {
+    let arr = [];
+    for (var i = 0; i <= 10; i ++){
+        arr.push((Math.floor) (Math.random() * 100))
+    }
+    return arr
 }
-deck1 = new Deck;
-console.log(deck1);
+console.log(randomArray());
+
+const swappingValues = (arr) => {
+    let firstValue = arr[0];
+    let secondValue = arr[arr.length-1];
+    arr[0] = secondValue;
+    arr[arr.length-1] = firstValue;
+    return arr;
+}
+console.log(swappingValues([32,2,3,5,7,6.1,3,66,10,-202,-20202,-332]));
+
+const reverse = (arr) => {
+    for (var i = 0; i < Math.floor(arr.length/2); i++){
+        let temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+    }
+    return arr
+}
+console.log(reverse([-3,5,1,3,2,4,10]));
+
+const insertXintoY = (arr, x, y) => {
+    arr[y] = x;
+    return arr;
+}
+console.log(insertXintoY([1, 3, 5, 7], 10, 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Deck {
+//     constructor() {
+//         const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
+//         const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+//         const deck = [];
+//         for (const suit of suits) {
+//             for (const face of faces) {
+//             deck.push(this.createCard(suit, face));
+//             }
+//         }
+//         this.deck = deck;
+//         }
+//         createCard(suit, face) {
+//         return face + " of " + suit;
+//         }
+// }
+// deck1 = new Deck;
+// console.log(deck1);
