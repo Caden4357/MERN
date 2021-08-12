@@ -116,7 +116,7 @@ const UserForm = (props) => {
                     <p>{ passwordError }</p> :
                     ''
                 }
-                {
+            {
                     password !== confirmPassword ?
                     <p>Passwords do not match</p>
                     : null 

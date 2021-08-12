@@ -9,6 +9,7 @@ Number.prototype.isPrime = function () {
     return true;
 }
 
+
 const { performance } = require('perf_hooks');
 const start = performance.now();
 let primeCount = 0;
